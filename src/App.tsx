@@ -9,46 +9,46 @@ import { backgrounds } from "./utils";
 function App() {
   const [period, setPeriod] = useState("weekly");
 
-  const handleClick = (e) => {
-    setPeriod(e.target.innerText.toLowerCase());
+  const handleClick = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+    setPeriod((e.target as HTMLButtonElement).innerText.toLowerCase());
   };
 
   return (
-    <main className="min-h-svh lg:grid-cols-4 lg:grid-rows-2">
-      <div className="grid gap-8">
-        <article className="bg-dark-blue max-w-[360px] rounded-2xl">
-          <div className="bg-light-violet p-6 flex items-center gap-4 rounded-2xl">
+    <main className="min-h-svh">
+      <div className="grid items-center justify-center gap-8 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+        <article className="bg-dark-blue max-w-[360px] rounded-2xl lg:row-span-2 lg:h-full">
+          <div className="bg-light-violet p-6 flex gap-4 rounded-2xl lg:flex-col lg:gap-10 lg:p-8">
             <img
               src={jeremy}
-              alt=""
+              alt="Jeremy Robson profile"
               className="w-16 h-16 rounded-[50%] outline-[3px] outline outline-white"
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:mb-10">
               <span className="text-pale-blue">Report for</span>
-              <span className="text-white text-2xl font-light">
+              <span className="text-white text-2xl font-light lg:text-4xl">
                 Jeremy Robson
               </span>
             </div>
           </div>
-          <div className="text-desaturated-blue px-6 py-6 flex justify-between  ">
-            <span
-              className="hover:text-white hover:cursor-pointer"
+          <div className="text-desaturated-blue p-6 flex justify-between lg:flex-col lg:gap-4 lg:p-8">
+            <button
+              className="text-start hover:text-white hover:cursor-pointer"
               onClick={handleClick}
             >
               Daily
-            </span>
-            <span
-              className="hover:text-white hover:cursor-pointer"
+            </button>
+            <button
+              className="text-start hover:text-white hover:cursor-pointer"
               onClick={handleClick}
             >
               Weekly
-            </span>
-            <span
-              className="hover:text-white hover:cursor-pointer"
+            </button>
+            <button
+              className="text-start hover:text-white hover:cursor-pointer"
               onClick={handleClick}
             >
               Monthly
-            </span>
+            </button>
           </div>
         </article>
         {data.map(({ title, timeframes }, index) => (
