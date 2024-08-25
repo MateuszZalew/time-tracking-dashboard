@@ -25,9 +25,9 @@ function App() {
             />
             <div className="flex flex-col lg:mb-10">
               <span className="text-pale-blue">Report for</span>
-              <span className="text-white text-2xl font-light lg:text-4xl">
+              <h2 className="text-white text-2xl font-light lg:text-4xl">
                 Jeremy Robson
-              </span>
+              </h2>
             </div>
           </div>
           <div className="text-desaturated-blue p-6 flex justify-between lg:flex-col lg:gap-4 lg:p-8">

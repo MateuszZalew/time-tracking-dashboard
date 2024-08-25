@@ -18,7 +18,7 @@ export default function Card({ title, timeframe, backgroundData }: CardProps) {
       />
       <div className="bg-dark-blue p-6 text-white rounded-2xl absolute top-8 w-full lg:p-8 lg:top-12 hover:cursor-pointer hover:bg-dark-blue-hover">
         <div className="flex justify-between items-center mb-3">
-          <span className="text-lg font-semibold">{title}</span>
+          <h2 className="text-lg font-semibold">{title}</h2>
           <button aria-label="Show more options" aria-disabled>
             <img src={ellipsis} alt="three dots" className="h-[5px]" />
           </button>
