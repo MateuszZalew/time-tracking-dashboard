@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <main className="min-h-svh">
+    <main className="min-h-svh grid place-content-center">
       <div className="grid items-center justify-center gap-8 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
         <article className="bg-dark-blue max-w-[360px] rounded-2xl lg:row-span-2 lg:h-full">
           <div className="bg-light-violet p-6 flex gap-4 rounded-2xl lg:flex-col lg:gap-10 lg:p-8">
