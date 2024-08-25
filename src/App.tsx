@@ -32,19 +32,25 @@ function App() {
           </div>
           <div className="text-desaturated-blue p-6 flex justify-between lg:flex-col lg:gap-4 lg:p-8">
             <button
-              className="text-start hover:text-white hover:cursor-pointer"
+              className={`${
+                period === "daily" ? "text-white" : ""
+              } text-start hover:text-white hover:cursor-pointer`}
               onClick={handleClick}
             >
               Daily
             </button>
             <button
-              className="text-start hover:text-white hover:cursor-pointer"
+              className={`${
+                period === "weekly" ? "text-white" : ""
+              } text-start hover:text-white hover:cursor-pointer`}
               onClick={handleClick}
             >
               Weekly
             </button>
             <button
-              className="text-start hover:text-white hover:cursor-pointer"
+              className={`${
+                period === "monthly" ? "text-white" : ""
+              } text-start hover:text-white hover:cursor-pointer`}
               onClick={handleClick}
             >
               Monthly

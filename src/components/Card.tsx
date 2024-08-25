@@ -8,7 +8,7 @@ type CardProps = {
 
 export default function Card({ title, timeframe, backgroundData }: CardProps) {
   return (
-    <div
+    <article
       className={`${backgroundData.color} max-w-[360px] h-[154px] rounded-2xl relative flex justify-end overflow-hidden lg:h-[232px]`}
     >
       <img
@@ -16,7 +16,7 @@ export default function Card({ title, timeframe, backgroundData }: CardProps) {
         alt={backgroundData.alt}
         className="h-fit relative bottom-1 right-6"
       />
-      <article className="bg-dark-blue p-6 text-white rounded-2xl absolute top-8 w-full lg:p-8 lg:top-12">
+      <div className="bg-dark-blue p-6 text-white rounded-2xl absolute top-8 w-full lg:p-8 lg:top-12 hover:cursor-pointer hover:bg-dark-blue-hover">
         <div className="flex justify-between items-center mb-3">
           <span className="text-lg font-semibold">{title}</span>
           <button aria-label="Show more options" aria-disabled>
@@ -31,7 +31,7 @@ export default function Card({ title, timeframe, backgroundData }: CardProps) {
             Last Week - {timeframe.previous}hrs
           </span>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
   );
 }
