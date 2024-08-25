@@ -8,7 +8,7 @@ type CardProps = {
 
 export default function Card({ title, timeframe, backgroundData }: CardProps) {
   return (
-    <article
+    <section
       className={`${backgroundData.color} max-w-[360px] h-[154px] rounded-2xl relative flex justify-end overflow-hidden lg:h-[232px]`}
     >
       <img
@@ -32,6 +32,6 @@ export default function Card({ title, timeframe, backgroundData }: CardProps) {
           </span>
         </div>
       </div>
-    </article>
+    </section>
   );
 }
