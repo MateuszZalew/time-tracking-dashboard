@@ -14,27 +14,27 @@ function App() {
   };
 
   return (
-    <main className="min-h-svh grid place-content-center">
+    <main className="grid min-h-svh place-content-center">
       <div className="grid items-center justify-center gap-8 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
-        <section className="bg-dark-blue max-w-[360px] rounded-2xl lg:row-span-2 lg:h-full">
-          <div className="bg-light-violet p-6 flex gap-4 rounded-2xl lg:flex-col lg:gap-10 lg:p-8">
+        <section className="max-w-[360px] rounded-2xl bg-dark-blue lg:row-span-2 lg:h-full">
+          <div className="flex gap-4 rounded-2xl bg-light-violet p-6 lg:flex-col lg:gap-10 lg:p-8">
             <img
               src={jeremy}
               alt="Jeremy Robson profile"
-              className="w-16 h-16 rounded-[50%] outline-[3px] outline outline-white"
+              className="h-16 w-16 rounded-[50%] outline outline-[3px] outline-white"
             />
             <div className="flex flex-col lg:mb-10">
               <span className="text-pale-blue">Report for</span>
-              <h2 className="text-white text-2xl font-light lg:text-4xl">
+              <h2 className="text-2xl font-light text-white lg:text-4xl">
                 Jeremy Robson
               </h2>
             </div>
           </div>
-          <div className="text-desaturated-blue p-6 flex justify-between lg:flex-col lg:gap-4 lg:p-8">
+          <div className="m-6 flex justify-between p-6 text-desaturated-blue lg:flex-col lg:gap-4 lg:p-8">
             <button
               className={`${
                 period === "daily" ? "text-white" : ""
-              } text-start hover:text-white hover:cursor-pointer`}
+              } text-start hover:cursor-pointer hover:text-white`}
               onClick={handleClick}
             >
               Daily
@@ -42,7 +42,7 @@ function App() {
             <button
               className={`${
                 period === "weekly" ? "text-white" : ""
-              } text-start hover:text-white hover:cursor-pointer`}
+              } text-start hover:cursor-pointer hover:text-white`}
               onClick={handleClick}
             >
               Weekly
@@ -50,7 +50,7 @@ function App() {
             <button
               className={`${
                 period === "monthly" ? "text-white" : ""
-              } text-start hover:text-white hover:cursor-pointer`}
+              } text-start hover:cursor-pointer hover:text-white`}
               onClick={handleClick}
             >
               Monthly
